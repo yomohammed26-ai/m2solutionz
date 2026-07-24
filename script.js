@@ -14,7 +14,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// 2. Interactive ROAS Calculator Logic
+// 2. Interactive ROAS Calculator Logic (PKR / Rs)
 const adSpendInput = document.getElementById('adSpend');
 const spendValue = document.getElementById('spendValue');
 const revMin = document.getElementById('revMin');
@@ -23,13 +23,13 @@ const revMax = document.getElementById('revMax');
 if (adSpendInput) {
     adSpendInput.addEventListener('input', (e) => {
         const val = parseInt(e.target.value);
-        spendValue.textContent = `$${val.toLocaleString()}`;
-        revMin.textContent = `$${(val * 8).toLocaleString()}`;
-        revMax.textContent = `$${(val * 10).toLocaleString()}`;
+        spendValue.textContent = `Rs ${val.toLocaleString()}`;
+        revMin.textContent = `Rs ${(val * 8).toLocaleString()}`;
+        revMax.textContent = `Rs ${(val * 10).toLocaleString()}`;
     });
 }
 
-// 3. Make Badges Draggable (User Interactive)
+// 3. Make Badges Draggable
 function makeElementDraggable(element) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     element.onmousedown = dragMouseDown;
@@ -60,7 +60,7 @@ function makeElementDraggable(element) {
 
 document.querySelectorAll('.draggable-widget').forEach(makeElementDraggable);
 
-// 4. Interactive Cursor Particle Canvas Background
+// 4. Interactive Particle Canvas Background
 const canvas = document.getElementById('bg-canvas');
 if (canvas) {
     const ctx = canvas.getContext('2d');
@@ -95,7 +95,6 @@ if (canvas) {
             if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
             if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
 
-            // Interaction with mouse cursor
             let dx = mouse.x - this.x;
             let dy = mouse.y - this.y;
             let distance = Math.sqrt(dx * dx + dy * dy);
@@ -153,7 +152,7 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Thank you, Muhammad has received your inquiry!');
+        alert('Thank you! Muhammad has received your inquiry at m2soultionz@gmail.com and will respond shortly.');
         contactForm.reset();
     });
 }
