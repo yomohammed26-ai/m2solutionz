@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad | E-Commerce & Performance Marketing Expert</title>
-    
-    <!-- FAVICON HERE -->
     <link rel="icon" type="image/png" href="favicon.png">
-
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+    <!-- Vanilla Tilt JS for 3D Interactive Hover -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
 </head>
 <body>
+
+    <!-- Interactive Particle Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Draggable Interactive Badges -->
+    <div class="draggable-widget" id="widget-1">
+        <i class="fa-solid fa-arrows-up-down-left-right drag-icon"></i>
+        <span>🔥 8x - 10x Avg ROAS</span>
+    </div>
+    
+    <div class="draggable-widget" id="widget-2">
+        <i class="fa-solid fa-arrows-up-down-left-right drag-icon"></i>
+        <span>💼 5+ Years Exp</span>
+    </div>
 
     <!-- Header / Navbar -->
     <header class="navbar">
@@ -23,7 +35,7 @@
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#stats">Results</a></li>
+                    <li><a href="#calculator">ROAS Calculator</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -45,28 +57,28 @@
                 </p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn primary-btn">Grow Your Brand</a>
-                    <a href="#services" class="btn secondary-btn">Our Services</a>
+                    <a href="#calculator" class="btn secondary-btn">Calculate Your ROAS</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Key Metrics / Stats Section -->
+    <!-- Key Metrics / Stats Section (3D Tilt Enabled) -->
     <section class="stats-section" id="stats">
         <div class="container stats-grid">
-            <div class="stat-card">
+            <div class="stat-card" data-tilt data-tilt-max="15" data-tilt-speed="400">
                 <h2>5+</h2>
                 <p>Years Experience</p>
             </div>
-            <div class="stat-cardHighlight">
+            <div class="stat-cardHighlight" data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
                 <h2>8x - 10x</h2>
                 <p>Average Ad ROAS</p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" data-tilt data-tilt-max="15" data-tilt-speed="400">
                 <h2>100%</h2>
                 <p>E-Com Turnkey Setup</p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" data-tilt data-tilt-max="15" data-tilt-speed="400">
                 <h2>24/7</h2>
                 <p>BPO & Support Ops</p>
             </div>
@@ -85,31 +97,55 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Interactive ROAS Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <h2 class="section-title">Interactive ROAS Estimator</h2>
+            <div class="calc-card" data-tilt data-tilt-max="5">
+                <h3>Drag to calculate your estimated revenue:</h3>
+                <div class="slider-container">
+                    <label for="adSpend">Monthly Ad Spend ($): <span id="spendValue">$5,000</span></label>
+                    <input type="range" id="adSpend" min="1000" max="50000" step="500" value="5000">
+                </div>
+                <div class="calc-results">
+                    <div class="res-box">
+                        <p>Estimated Revenue (8x)</p>
+                        <h4 id="revMin">$40,000</h4>
+                    </div>
+                    <div class="res-box highlight">
+                        <p>Estimated Revenue (10x)</p>
+                        <h4 id="revMax">$50,000</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (3D Tilt Enabled) -->
     <section class="services" id="services">
         <div class="container">
             <h2 class="section-title">Core Services</h2>
             <div class="services-grid">
                 
-                <div class="service-card">
+                <div class="service-card" data-tilt data-tilt-max="15" data-tilt-speed="400">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <h3>E-Commerce Web Development</h3>
                     <p>Custom, conversion-focused e-commerce storefronts engineered for smooth customer journeys and high sales velocity.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-tilt data-tilt-max="15" data-tilt-speed="400">
                     <i class="fa-brands fa-tiktok"></i>
                     <h3>TikTok & Meta Ads Management</h3>
                     <p>Performance marketing campaigns designed to scale profitably. Proven track record of achieving 8x to 10x ROAS.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-tilt data-tilt-max="15" data-tilt-speed="400">
                     <i class="fa-solid fa-headset"></i>
                     <h3>BPO & Customer Support</h3>
                     <p>Dedicated remote support teams, live customer care, order management, and query handling to retain customers.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-tilt data-tilt-max="15" data-tilt-speed="400">
                     <i class="fa-solid fa-gears"></i>
                     <h3>Virtual Operations & Management</h3>
                     <p>Complete backend e-commerce operations, store management, product updates, and daily operational oversight.</p>
