@@ -30,7 +30,7 @@
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">M2<span>Solutionz</span></a>
+            <a href="#" class="logo">M2<span class="logo-contrast">Solutionz</span></a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
@@ -63,7 +63,7 @@
         </div>
     </section>
 
-    <!-- Key Metrics / Stats Section (3D Tilt Enabled) -->
+    <!-- Key Metrics / Stats Section -->
     <section class="stats-section" id="stats">
         <div class="container stats-grid">
             <div class="stat-card" data-tilt data-tilt-max="15" data-tilt-speed="400">
@@ -97,31 +97,31 @@
         </div>
     </section>
 
-    <!-- Interactive ROAS Calculator Section -->
+    <!-- Interactive ROAS Calculator Section (Pakistani Rupees Rs) -->
     <section class="calculator-section" id="calculator">
         <div class="container">
             <h2 class="section-title">Interactive ROAS Estimator</h2>
             <div class="calc-card" data-tilt data-tilt-max="5">
-                <h3>Drag to calculate your estimated revenue:</h3>
+                <h3>Drag to calculate your estimated monthly revenue:</h3>
                 <div class="slider-container">
-                    <label for="adSpend">Monthly Ad Spend ($): <span id="spendValue">$5,000</span></label>
-                    <input type="range" id="adSpend" min="1000" max="50000" step="500" value="5000">
+                    <label for="adSpend">Monthly Ad Spend: <span id="spendValue">Rs 500,000</span></label>
+                    <input type="range" id="adSpend" min="100000" max="5000000" step="50000" value="500000">
                 </div>
                 <div class="calc-results">
                     <div class="res-box">
                         <p>Estimated Revenue (8x)</p>
-                        <h4 id="revMin">$40,000</h4>
+                        <h4 id="revMin">Rs 4,000,000</h4>
                     </div>
                     <div class="res-box highlight">
                         <p>Estimated Revenue (10x)</p>
-                        <h4 id="revMax">$50,000</h4>
+                        <h4 id="revMax">Rs 5,000,000</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section (3D Tilt Enabled) -->
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <h2 class="section-title">Core Services</h2>
@@ -160,9 +160,22 @@
         <div class="container">
             <h2 class="section-title">Let's Scale Your Business</h2>
             <div class="contact-wrapper">
+                
+                <!-- Contact Direct Info Cards -->
+                <div class="contact-info-boxes">
+                    <a href="https://wa.me/923362552365" target="_blank" class="contact-info-card">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>+92 336 2552365</span>
+                    </a>
+                    <a href="mailto:m2soultionz@gmail.com" class="contact-info-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>m2soultionz@gmail.com</span>
+                    </a>
+                </div>
+
                 <form class="contact-form" id="contact-form">
                     <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Business Email" required>
+                    <input type="email" placeholder="Your Email Address" required>
                     <select required>
                         <option value="" disabled selected>Select Service Interested In</option>
                         <option value="ecom">E-Commerce Development</option>
@@ -170,13 +183,14 @@
                         <option value="bpo">BPO & Customer Support</option>
                         <option value="ops">Virtual Store Operations</option>
                     </select>
-                    <textarea rows="5" placeholder="Tell us about your project or current ad spend..." required></textarea>
+                    <textarea rows="5" placeholder="Tell us about your store or current ad budget..." required></textarea>
                     <button type="submit" class="btn primary-btn">Request Strategy Call</button>
                 </form>
+                
                 <div class="social-links">
-                    <a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://wa.me/923362552365" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:m2soultionz@gmail.com" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="tel:+923362552365" title="Call Us"><i class="fa-solid fa-phone"></i></a>
                 </div>
             </div>
         </div>
